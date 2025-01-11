@@ -1,17 +1,19 @@
 import './styles.css'
 import { ContextMenu } from './menu'
+import { AnalyticsClicksModule } from './modules/analytics-clicks.module'
+import { VladilenModule } from './modules/vladilen.module'
 
-document.addEventListener('DOMContentLoaded', function () {    
-    const contextMenu = new ContextMenu('.menu');
-    // console.log(contextMenu);
+  
+const contextMenu = new ContextMenu('.menu');
+const clickAnalitycs = new AnalyticsClicksModule ('clicks-analytics', 'Аналитика кликов (5 секунд)');
+const vladilen = new VladilenModule ('vladilen', 'Полюбоваться Владиленом');
 
-    document.body.addEventListener('contextmenu', (event) => {
+document.body.addEventListener('contextmenu', (event) => {
       event.preventDefault();
       contextMenu.open(event)
-  });
-  contextMenu.add('1');
-  contextMenu.add('2');
-  contextMenu.add('3');
+});
 
-  });
+contextMenu.add(clickAnalitycs);
+contextMenu.add(vladilen);
+
 

@@ -27,7 +27,8 @@ export class ContextMenu extends Menu {
     }
 
     add (module) {
-        this.items.push(module)
-        this.el.insertAdjacentHTML('beforeend', module.toHTML())
+        this.items.push(module);
+        console.log(module.toHTML());
+        this.el.insertAdjacentHTML('beforeend', module.toHTML());
     }
 }

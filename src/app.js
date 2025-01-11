@@ -3,7 +3,8 @@ import { ContextMenu } from './menu';
 import { AnalyticsClicksModule } from './modules/analytics-clicks.module';
 import { VladilenModule } from './modules/vladilen.module';
 import { RandomSoundModule } from './modules/randomSound.module';
-import { TimerModule } from './modules/timer.module'
+import { TimerModule } from './modules/timer.module';
+import { ShapeModule } from './modules/shape.module';
 
   
 const contextMenu = new ContextMenu('.menu');
@@ -11,6 +12,7 @@ const clickAnalitycs = new AnalyticsClicksModule ('clicks-analytics', 'Анал�
 const vladilen = new VladilenModule ('vladilen', 'Полюбоваться Владиленом');
 const randomSound = new RandomSoundModule ();
 const timer = new TimerModule ();
+const randomShape = new ShapeModule ();
 
 document.body.addEventListener('contextmenu', (event) => {
       event.preventDefault();
@@ -21,5 +23,6 @@ contextMenu.add(clickAnalitycs);
 contextMenu.add(vladilen);
 contextMenu.add(randomSound);
 contextMenu.add(timer);
+contextMenu.add(randomShape);
 
 

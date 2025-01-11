@@ -5,7 +5,7 @@ import sound3 from '../assets/sound3.mp3';
 
 export class RandomSoundModule extends Module {
     constructor() {
-      super('randomSound', 'Random Sound');
+      super('randomSound', 'Случайный звук');
       this.name = 'Random Sound';
     }
   

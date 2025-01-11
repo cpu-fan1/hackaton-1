@@ -2,7 +2,7 @@ import { Module } from '../core/module.js';
 
 export class TimerModule extends Module {
     constructor() {
-      super('timer', 'Timer');
+      super('timer', 'Обратный отсчет');
       this.name = 'Timer';
     }
   

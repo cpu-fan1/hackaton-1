@@ -5,6 +5,7 @@ import { VladilenModule } from './modules/vladilen.module';
 import { RandomSoundModule } from './modules/randomSound.module';
 import { TimerModule } from './modules/timer.module';
 import { ShapeModule } from './modules/shape.module';
+import { BackgroundModule } from './modules/background.module'
 
   
 const contextMenu = new ContextMenu('.menu');
@@ -13,6 +14,7 @@ const vladilen = new VladilenModule ('vladilen', 'Полюбоваться Вл�
 const randomSound = new RandomSoundModule ();
 const timer = new TimerModule ();
 const randomShape = new ShapeModule ();
+const backgroundChange = new BackgroundModule ();
 
 document.body.addEventListener('contextmenu', (event) => {
       event.preventDefault();
@@ -24,5 +26,6 @@ contextMenu.add(vladilen);
 contextMenu.add(randomSound);
 contextMenu.add(timer);
 contextMenu.add(randomShape);
+contextMenu.add(backgroundChange);
 
 
